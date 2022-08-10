@@ -23,6 +23,9 @@ type_selection.grid(row=1, column=1, sticky="NW", padx=10, pady=10)
 type_moedas = tk.Label(text='Dados do país:')
 type_moedas.grid(row=2, column=0, sticky="NW", padx=10, pady=10)
 
+footer = tk.Label(text="Desenvolvido por: Renato Maldonado", background='orange', foreground='white')
+footer.grid(row=4, column=0, columnspan=3, padx=10, pady=10)
+
 def capturar_dados():
     dados = tk.Label(text='padrão', width=55, height=3, background='black', foreground='white')
     dados.grid(row=2, column=1, columnspan=2, sticky="NW", padx=10, pady=10)
