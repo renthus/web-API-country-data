@@ -23,7 +23,7 @@
 <p align="justify">
 Desenvolvimento de uma API para consumir dados disponíveis de países.
    
-![API países](https://user-images.githubusercontent.com/49447595/184183331-305aa7c7-d79d-415e-b752-07e19c895ed6.PNG)
+![API paises](https://user-images.githubusercontent.com/49447595/184302853-f9bda5ad-6fe0-4578-9c3b-9806c90003dd.PNG)
    
 </p>
 
