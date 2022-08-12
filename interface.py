@@ -23,17 +23,21 @@ type_selection.grid(row=1, column=1, sticky="NW", padx=10, pady=10)
 type_moedas = tk.Label(text='Dados do país:')
 type_moedas.grid(row=2, column=0, sticky="NW", padx=10, pady=10)
 
-footer = tk.Label(text="Desenvolvido por: Renato Maldonado", background='orange', foreground='white')
+footer = tk.Label(text="Desenvolvido por: Renato Maldonado", background='blue', foreground='white')
 footer.grid(row=4, column=0, columnspan=3, padx=10, pady=10)
 
 def capturar_dados():
-    dados = tk.Label(text='padrão', width=55, height=3, background='black', foreground='white')
-    dados.grid(row=2, column=1, columnspan=2, sticky="NW", padx=10, pady=10)
-    moeda = mostrar_moedas(type_selection.get())
-    populacao = mostrar_populacao(type_selection.get())
-    dados = tk.Label(text='padrão', width=55, height=3, background='black', foreground='white')
-    dados.grid(row=2, column=1, columnspan=2, sticky="NW", padx=10, pady=10)
-    dados["text"] = f'Moeda: {moeda[0]} \n Code: {moeda[1]} \n População: {populacao}'
+    try:
+        dados = tk.Label(text='padrão', width=55, height=3, background='black', foreground='white')
+        dados.grid(row=2, column=1, columnspan=2, sticky="NW", padx=10, pady=10)
+        moeda = mostrar_moedas(type_selection.get())
+        populacao = mostrar_populacao(type_selection.get())
+        dados = tk.Label(text='padrão', width=55, height=3, background='black', foreground='white')
+        dados.grid(row=2, column=1, columnspan=2, sticky="NW", padx=10, pady=10)
+        dados["text"] = f'Moeda: {moeda[0]} \n Code: {moeda[1]} \n População: {populacao}'
+    except:
+        dados = tk.Label(text='Dados não encontrados na api', width=55, height=3, background='red', foreground='white')
+        dados.grid(row=2, column=1, columnspan=2, sticky="NW", padx=10, pady=10)
 
 button = tk.Button(text='Enviar', command=capturar_dados)
 button.grid(row=1, column=2, sticky="NE", padx=10, pady=10)
